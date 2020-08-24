@@ -6,7 +6,7 @@
         function draw() {
             var canvas = document.getElementById("tutorial");
             if (canvas.getContext) {
-                var ctx = canvas.getContext('2d');
+                ctx = canvas.getContext('2d');
 
                 ctx.fillStyle = "rgb(200,0,0)";
                 ctx.fillRect(10, 10, 55, 50);
@@ -17,16 +17,23 @@
         }
     </script>
     <style type="text/css">
-        canvas {
-            border: 1px solid black;
-        }
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    html,body {
+        height: 100%;
+        widows: 100%;
+    }
+    canvas {
+        display: block;
+    }
     </style>
 </head>
 
 <body onload="draw()">
-    <canvas id="tutorial" width="150" height="150">
-
-    </canvas>
+<canvas id="tutorial">
+</canvas>
 </body>
 
 </html>
